@@ -10,3 +10,6 @@ const addition = (a, b) => a+b;
 const add5 = a => 5+a;
 console.log(addition(6,7));
 console.log(add5(6));
+
+const arrayfrutas = ['banana','apple','tuna'];
+console.log(arrayfrutas.pop)
