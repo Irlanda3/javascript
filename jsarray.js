@@ -12,4 +12,7 @@ console.log(addition(6,7));
 console.log(add5(6));
 
 const arrayfrutas = ['banana','apple','tuna'];
-console.log(arrayfrutas.pop())
+console.log(arrayfrutas.pop());
+
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.shift();
