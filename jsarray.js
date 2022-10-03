@@ -16,3 +16,7 @@ console.log(arrayfrutas.pop());
 
 const fruits = ["Banana", "Orange", "Apple", "Mango"];
 fruits.shift();
+
+// returns the first element now stored in a variable
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+let fruit = fruits.shift();
