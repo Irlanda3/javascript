@@ -22,3 +22,7 @@ console.log(car.engine());
 console.log(truck);
 
 console.log(vehicle);
+
+const array = [1,2,3];
+const arraymapped = array.map((element)=> element);
+console.log(arraymapped);
