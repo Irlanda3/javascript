@@ -1,0 +1,50 @@
+const participantes = []; // necesito declarar el array aqui porq si no se inicializa cada vez que llamo la fn
+function add(agregando) {
+  participantes.push(agregando);
+}
+// we use push to add to an array so we do not have holes
+// push adds to the end of the array
+add("armandito");
+add("husky");
+add("alma");
+const receivers = participantes;
+
+// este funciona en el browser
+//let name = prompt(" please enter you name.");
+//console.log(name);
+
+//Since ES5, you can use the built-in forEach method: It loops atravez del array y regresa cada palabra
+participantes.forEach(function (giver) {
+  //for every giver we need a random receiver.
+  let recipient = receivers[Math.floor(Math.random() * receivers.length)];
+  console.log("recipients by using random se escojio a : ", recipient);
+  let personas = ` ${giver} le toca dar regalo a ${recipient}`;
+  console.log(personas);
+  //console.log(typeof recipient); // es un string
+
+  if (giver === recipient) {
+    // PAra no darse a si mismo
+    //recipient.
+    console.log("------No te puedes dar ati mismo------");
+    let cambia =
+      participantes[Math.floor(Math.random() * participantes.length)];
+    console.log("segun se cambio el receiver a: ", cambia);
+    //const result = personas.filter(words => words === recipient);
+    //return arr.filter((value, index, self) => self.indexOf(value) === index);
+    let intercambio = ` ${giver} ===> ${cambia}`;
+    console.log(intercambio);
+  }
+});
+
+// que no se repitan las personas en la lista de recipient.
+function removeDuplicates(arr) {
+  //return arr.filter((value, index, self) => self.indexOf(value) === index);
+  //let arr2 = ["apple", "bannana", "orange", "apple", "orange"];
+
+  duplicados = arr.filter(function (item, index, inputArray) {
+    return inputArray.indexOf(item) == index;
+  });
+  console.log(duplicados);
+}
+
+//removeDuplicates(receivers); //  removemos los duplicados en la lista de receivers
