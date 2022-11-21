@@ -1,38 +1,35 @@
-// Strings
-const myVariable = "Mathematics"
+// Obtener elements del DOM
+const menuBtn = document.querySelector(".menu-btn"); //para seleccionar selectors in de Document
+const menuBtnMobile = document.querySelector(".menu-btn-mobile");
+const sidebar = document.querySelector(".sidebar");
+const closeBtn = document.querySelector(".close-btn");
+const backdrop = document.querySelector(".sidebar-backdrop");
+const navbarMenu = document.querySelector(".navbar-menu");
 
-// The lenght property
-console.log(myVariable.length);
+//inicializar on scroll animations
+AOS.init();
 
-console.log(myVariable.charAt(0));
+//Add menu click events
+menuBtn.addEventListener("click", sidebarOpen);
+menuBtnMobile.addEventListener("click", sidebarOpen);
 
-console.log(myVariable.indexOf("mat"));
+/*Open sidebar function*/
 
-console.log(myVariable.slice(5, 8));
-   
-console.log(myVariable.slice(5));
-console.log(myVariable.toUpperCase());
+function sidebarOpen() {
+  /*cambia posision de sidebar */
+  sidebar.style.right = "0";
+  //muestra backdrop
+  backdrop.style.display = "block";
+  //muestra backdrop atravez de una transition suavez
+  setTimeout(() => {
+    backdrop.style.opacity = "1";
+  }, 50);
+  //deshabilita el scroll en el body
+  document.body.classList.add("sidebar-open-body");
+}
 
-console.log(myVariable.includes("mat"));
-
-console.log(myVariable.split("e")); // returns an array not including the e
-
-console.log(myVariable.split(""));
-
-console.log("john,joe,dave".split(","));
-
-console.log("husky likes to run all day and nigth".split(" "));
-
-
-//------numbers and number methods----
-
-// an integeris a whole number
-const myNumber = 42;
-console.log(myNumber);
-
-
-// a number with a decimal point is a float which references the ''floating point'
-const myFloat =  42.0;
-const myString = "42";
-
-console.log(myNumber === myString);
+//click event para close button
+closeBtn.addEventListener("click", () => {
+  //cambiamos la position de el sidebar
+  sidebar.style.right = "-20em";
+});
