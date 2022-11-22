@@ -32,4 +32,11 @@ function sidebarOpen() {
 closeBtn.addEventListener("click", () => {
   //cambiamos la position de el sidebar
   sidebar.style.right = "-20em";
+  //esconde backdrop  con una transicion suave
+  backdrop.style.opacity = "0";
+  setTimeout(() => {
+    backdrop.style.display = "none";
+  }, 300);
+  // haz q el body sea scrollable otra vez
+  document.body.classList.remove("sidebar-open-body");
 });
