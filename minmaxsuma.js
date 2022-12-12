@@ -2,6 +2,7 @@ let numeros = 0;
 
 function miniMaxsum(arr) {
   const arrayNums = [1, 3, 5, 7, 9];
+  const newArray = [];
 
   for (let nums of arrayNums) {
     console.log(nums, " is element of the array");
@@ -18,7 +19,12 @@ function miniMaxsum(arr) {
     let count = 0;
     for (let elements of copia) {
       count += elements;
-      console.log(count);
+      //console.log(count);
+      if (count > 0) {
+        let numax = newArray.push(count);
+        let numCount = Math.max(newArray);
+        console.log("This is array push", numCount);
+      }
     }
 
     console.log("");
