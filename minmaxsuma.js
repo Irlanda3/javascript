@@ -19,15 +19,22 @@ function miniMaxsum(arr) {
     let count = 0;
     for (let elements of copia) {
       count += elements;
-      //console.log(count);
-      if (count > 0) {
-        let numax = newArray.push(count);
-        let numCount = Math.max(newArray);
-        console.log("This is array push", numCount);
-      }
-    }
+      console.log(count);
 
-    console.log("");
+      //console.log(typeof newArray);
+      //console.log(Array.isArray(newArray));
+    }
+    newArray.push(count);
+    Math.max(newArray);
+    console.log("", count); // este si me imprime los numeros finales sumados
   }
+  console.log("New array", newArray);
+  console.log(
+    "Max number ",
+    Math.max(...newArray),
+    "Min number",
+    Math.min(...newArray)
+  );
+  //console.log("Min number", Math.min(...newArray));
 }
 miniMaxsum();
