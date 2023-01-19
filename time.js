@@ -8,11 +8,17 @@ if (s.includes("AM")) {
 } else {
   console.log("This is pm time");
   //console.log(parseInt(s));
-  let set1 = s.slice(0, 2);
+  let set1 = Number(s.slice(0, 2));
   let set2 = s.slice(3, 5);
   let set3 = s.slice(6, 8);
 
-  console.log(Number(set1)); // Number is used to convert str to number
+  //console.log(Number(set1)); // Number is used to convert str to number
   console.log(Number(set2));
   console.log(Number(set3));
+
+  console.log(typeof set1);
+
+  if (set1 === 07) {
+    console.log("19:", set2, ":", set3, "PM");
+  }
 }
