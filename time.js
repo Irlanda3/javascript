@@ -22,3 +22,10 @@ if (s.includes("AM")) {
     console.log("19:", set2, ":", set3, "PM");
   }
 }
+
+// change anytime to 24 format
+const time = (anytime) => {
+  return anytime + 12;
+};
+
+console.log(time(1));
