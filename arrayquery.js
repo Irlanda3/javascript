@@ -11,15 +11,15 @@ countbc = 1;
 queries.forEach(myFunction);
 
 function myFunction(items) {
-  //console.log(items);
+  console.log(items);
   for (const i in string) {
     //console.log(string[i], "string");
     //if (items === string[i]) {
     //console.log("inside de if", count++);
     if (items === "ab") {
-      console.log("found ab similar ab", countab++);
+      console.log("found ab similar ab", items, countab++);
     } else if (items === "abc") {
-      console.log("found abc similar abc");
+      console.log("found abc similar abc", items);
     } else if (items === "bc") {
       console.log("found bc similar bc");
     }
