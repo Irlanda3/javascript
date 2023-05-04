@@ -17,4 +17,4 @@ Hint: https://untangled.io/in-depth-es6-destructuring-with-assembled-avengers
 //answer
 
  let person = ["Chris", 12, "Owen"];
- let [firstName, ,, lastName] = person;
+ let [firstName,,lastName] = person;
