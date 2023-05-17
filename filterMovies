@@ -1,0 +1,22 @@
+
+// Sample array of movie objects
+const movies = [
+  { title: 'Inception', genre: 'Sci-Fi' },
+  { title: 'The Shawshank Redemption', genre: 'Drama' },
+  { title: 'The Dark Knight', genre: 'Action' },
+  { title: 'Pulp Fiction', genre: 'Crime' },
+  { title: 'The Matrix', genre: 'Sci-Fi' },
+];
+
+// Function to filter movies by genre
+function filterMoviesByGenre(movieArray, genre) {
+  // Use the filter() method to return an array of movies that match the specified genre
+  const filteredMovies = movieArray.filter((movie) => movie.genre === genre);
+  return filteredMovies;
+}
+
+// Call the function and store the filtered array
+const filteredMoviesArray = filterMoviesByGenre(movies, 'Sci-Fi');
+
+// Output the filtered array
+console.log(filteredMoviesArray);
