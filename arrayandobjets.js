@@ -19,3 +19,25 @@ Using the dot notation, assign a color property to the favCar object and give it
 Using the dot notation, assign a covertible property to the favCar object and give it a boolean value of your choice.
 
 Use the console to log the entire favCar object.
+
+// asnwer
+
+var cloths = [];
+
+cloths.push("shirt");
+cloths.push("sueter");
+cloths.push("calcetas");
+cloths.push("panntalon");
+cloths.push("camisa");
+
+cloths.pop(5);
+console.log(cloths);
+
+cloths.push('blusa')
+console.log(cloths[2]);
+console.log(cloths);
+
+var favCar = {}
+favCar.color = 'blue';
+favCar.convertible = true;
+console.log(favCar);
